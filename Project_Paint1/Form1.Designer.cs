@@ -31,6 +31,7 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.butClean = new System.Windows.Forms.Button();
             this.butChange = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -58,6 +59,7 @@
             this.butChange.TabIndex = 2;
             this.butChange.Text = "Change color";
             this.butChange.UseVisualStyleBackColor = true;
+            this.butChange.Click += new System.EventHandler(this.butChange_Click);
             // 
             // Form1
             // 
@@ -78,6 +80,7 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button butClean;
         private System.Windows.Forms.Button butChange;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

@@ -16,10 +16,19 @@ namespace Project_Paint1
         {
             InitializeComponent();
         }
-
+        Color color = Color.Red;
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void butChange_Click(object sender, EventArgs e)
+        {
+            DialogResult result = colorDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                color = colorDialog1.Color;
+            }
         }
     }
 }
