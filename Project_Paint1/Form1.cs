@@ -16,5 +16,10 @@ namespace Project_Paint1
         {
             InitializeComponent();
         }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
