@@ -16,12 +16,12 @@ namespace Project_Paint1
         {
             InitializeComponent();
         }
+        bool painting;
+        bool erase;
         Color color = Color.Red;
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
-
+        //Vlad Tykhoniuk
         private void butChange_Click(object sender, EventArgs e)
         {
             DialogResult result = colorDialog1.ShowDialog();
@@ -30,5 +30,20 @@ namespace Project_Paint1
                 color = colorDialog1.Color;
             }
         }
+        ////////////////////////
+        //Vlad Tykhoniuk 
+        private void mainPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                erase = true;
+            }
+
+            if (e.Button == MouseButtons.Left)
+            {
+                painting = true;
+            }
+        }
+        ////////////////////////////////
     }
 }
