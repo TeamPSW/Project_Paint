@@ -41,6 +41,8 @@
             this.mainPanel.Size = new System.Drawing.Size(607, 425);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainPanel_MouseDown);
+            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainPanel_MouseMove);
+            this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mainPanel_MouseUp);
             // 
             // butClean
             // 
@@ -50,6 +52,7 @@
             this.butClean.TabIndex = 1;
             this.butClean.Text = "Clean";
             this.butClean.UseVisualStyleBackColor = true;
+            this.butClean.Click += new System.EventHandler(this.butClean_Click);
             // 
             // butChange
             // 
@@ -65,6 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.butChange);
             this.Controls.Add(this.butClean);

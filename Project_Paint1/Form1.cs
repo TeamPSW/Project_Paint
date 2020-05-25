@@ -31,6 +31,9 @@ namespace Project_Paint1
             }
         }
         ////////////////////////
+        
+
+
         //Vlad Tykhoniuk 
         private void mainPanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -43,6 +46,44 @@ namespace Project_Paint1
             {
                 painting = true;
             }
+        }
+        ////////////////////////////////
+        
+        //Kiryl Hubanau
+        private void mainPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(painting)
+            {
+                {
+                    int x = e.X;
+                    int y = e.Y;
+                    Graphics g = mainPanel.CreateGraphics();
+                    g.DrawRectangle(new Pen(color, 2), x, y, 1, 1);
+                }
+            }
+
+            if (erase)
+            {
+                {
+                    int x = e.X;
+                    int y = e.Y;
+                    Graphics g = mainPanel.CreateGraphics();
+                    g.DrawRectangle(new Pen(Color.White, 2), x, y, 2, 2);
+                }
+
+            }
+        }
+        /////////////////////////////////
+
+        //Андрей, код который мы тебе кинем вставь в эти 2 метода и замени комментарий как у нас
+        private void mainPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void butClean_Click(object sender, EventArgs e)
+        {
+
         }
         ////////////////////////////////
     }
