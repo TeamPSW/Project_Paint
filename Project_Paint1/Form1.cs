@@ -75,15 +75,18 @@ namespace Project_Paint1
         }
         /////////////////////////////////
 
-        //Андрей, код который мы тебе кинем вставь в эти 2 метода и замени комментарий как у нас
+        //Andrzej Duko
         private void mainPanel_MouseUp(object sender, MouseEventArgs e)
         {
-
+            erase = false;
+            painting = false;
         }
+
 
         private void butClean_Click(object sender, EventArgs e)
         {
-
+            Graphics g = mainPanel.CreateGraphics();
+            g.Clear(Color.White);
         }
         ////////////////////////////////
     }
